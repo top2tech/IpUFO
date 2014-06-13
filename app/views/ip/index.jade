@@ -1,0 +1,23 @@
+extends ../layout/pc
+
+block body
+  h2#title IpUFO
+  div
+    table
+      thead
+        tr
+          th Your IP
+          th Your Port
+      tbody
+        tr
+          td#IP #{endpoint.ip}
+          td#Port #{endpoint.port}
+  br
+  h3 Your Request Headers:
+  div 
+    table
+      tbody
+        -for (var headerName in headers)
+          tr
+            td#headerName  #{headerName}:
+            td= headers[headerName]

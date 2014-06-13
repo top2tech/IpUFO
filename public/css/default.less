@@ -1,0 +1,46 @@
+﻿.right {
+     position: absolute;
+     right: 0px;
+     width: 300px;
+ }
+
+.text3d(@color) {
+  color: @color;
+  text-shadow: 1px 1px 0px darken(@color, 5%),
+               2px 2px 0px darken(@color, 10%),
+               3px 3px 0px darken(@color, 15%),
+               4px 4px 0px darken(@color, 20%),
+               4px 4px 2px #000;
+}
+
+
+
+
+
+body {
+    background-color:#888888
+}
+
+#title {
+     font-size:x-large;
+     .text3d(#ffd800);
+     .right;
+     
+}
+
+#IP {
+    font-size:x-large;
+    width:200px;
+    text-align:center;
+   
+ }
+
+#headerName {
+    font-weight:bold
+}
+
+#IP
+{
+  border-top:1px solid #eaeaea; 
+  border-bottom:1px solid #eaeaea; 
+}
