@@ -1,0 +1,35 @@
+extends ../layout/pc
+
+block body
+    include ../frag/navbar-ip
+    br
+    .container
+        .row
+            .col-md-12
+                div.panel.panel-default
+                  div.panel-heading
+                    h3.panel-title For command line tool curl:
+                  div.panel-body
+                    p We will detect you're using curl by your user agent string, then return only your ip, nothing else.
+                    p e.g. 
+                    p   <strong>curl IpUFO.com</strong>
+                    p   response: 23.100.32.204
+
+            .col-md-12
+                div.panel.panel-default
+                  div.panel-heading
+                    h3.panel-title For browser or api:
+                  div.panel-body
+                    p to get response only containing your ip string, use this url: 
+                       a(href="/i") http://IpUFO.com/i
+
+            .col-md-12
+                div.panel.panel-default
+                  div.panel-heading
+                    h3.panel-title To get JSON of your IP and other request information:
+                  div.panel-body
+                    p use this url: 
+                      a(href="/j") http://IpUFO.com/j
+
+
+

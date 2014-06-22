@@ -9,5 +9,6 @@ module.exports = function ( app, config ) {
     app.use( express.static( publicDir));
     app.set( "views", config.root + "/app/views" );
     app.set( "view engine", "jade" );
+    app.locals.pretty=true;
 
 };

@@ -1,23 +1,22 @@
 extends ../layout/pc
 
 block body
-  h2#title IpUFO
-  div
-    table
-      thead
-        tr
-          th Your IP
-          th Your Port
-      tbody
-        tr
-          td#IP #{endpoint.ip}
-          td#Port #{endpoint.port}
-  br
-  h3 Your Request Headers:
-  div 
-    table
-      tbody
-        -for (var headerName in headers)
-          tr
-            td#headerName  #{headerName}:
-            td= headers[headerName]
+  include ../frag/navbar-ip
+
+  div.jumbotron
+    div.container
+      p Your IP:
+      h1.small-pad #{requestInfo.endpoint.ip}
+      p Your Port: #{requestInfo.endpoint.port}
+
+  div.panel.panel-default
+    div.panel-heading
+       h4 Your Browser Information:
+    div.panel-body
+      .container
+        .row
+          -for (var headerName in requestInfo.headers)
+            .col-md-12.grid-bottomline
+              h4 #{headerName}:
+              p #{requestInfo.headers[headerName]}
+

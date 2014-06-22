@@ -1,0 +1,16 @@
+extends ../layout/pc
+
+block body
+    include ../frag/navbar-ip
+    #disqus_thread
+    script.
+      (function load_disqus() {
+          var disqus_shortname = 'ipufo';
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })()
+
+    
