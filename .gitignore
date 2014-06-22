@@ -1,6 +1,5 @@
 node_modules
 public/libs
-*.css
 *.sublime-workspace
 *.suo
 .DS_Store
